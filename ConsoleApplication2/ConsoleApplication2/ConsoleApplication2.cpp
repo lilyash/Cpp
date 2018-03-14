@@ -279,7 +279,9 @@ public:
 	}
 
 	friend ostream& operator<<(ostream& os, const dinamArray& obj) {
-		os << "size = " << obj.size << " reserv = " << obj.reserv <<" array = { ";
+		os << " size = " << obj.size << endl;
+		os << " reserv = " << obj.reserv << endl;
+		os << " array = { ";
 		for (int i = 0; i < obj.size; i++) {
 			os << obj.arr[i] << ' ';
 		}
@@ -288,9 +290,10 @@ public:
 	}
 
 	void reserve(int n) {
-		if (n <= 0) {
+		if (n < 0) {
 			throw BadReservException();
 		}
+		if (n > 0) {
 		reserv = n;
 		int *buf = new int[size + n];
 		for (int i = 0; i < size; i++) {
@@ -298,6 +301,7 @@ public:
 		}
 		delete[]arr;
 		arr = buf;
+	}
 	}
 
 	int capacity() {
@@ -343,8 +347,9 @@ int main()
 	setlocale(LC_ALL, "ru");
 	int status = 0;
 	int numArr = 0;
+	int number = 0;
 	dinamArray arr1(10, 5);;
-	dinamArray arr2 = dinamArray(5);
+	dinamArray arr2 = dinamArray(5, 88);
 	while (status != -1) {
 		if (status == 0) {
 			cout << "1.Изменить массив\n2.Вывести массив" << endl;
@@ -358,7 +363,7 @@ int main()
 			system("cls");
 		}
 		if (status == 1) {
-			cout << "Какой массивы надо заполнить?(1/2)" << endl;
+			cout << "Какой из массивов надо заполнить?(1/2)" << endl;
 			cin >> status;
 			numArr;
 			if (numArr == 1) {
@@ -373,14 +378,29 @@ int main()
 			system("cls");
 		}
 		if (status == 2) {
-			cout <<  "Какой массивы надо вывести?(1/2)" << endl;
+			cout <<  "Какой из массивов надо вывести?(1/2)" << endl;
 			cin >> numArr;
 			if (numArr == 1) {
-				cout << arr1;
+				cout << arr1 << endl;
 			}
 			if (numArr == 2) {
-				cout << arr2;
+				cout << arr2<< endl;
 			}
+			cout << "Вывести ли другой массив? (Да 1, Нет 0)" << endl;
+				cin >> number;
+				if (number == 1) {
+					cout << "Введите номер массива 1/2";
+					cin >> numArr;
+					if (numArr == 1) {
+						cout << arr1 << endl;
+					}
+					if (numArr == 2) {
+						cout << arr2 << endl;
+					}
+				}
+				else {
+					status = 0;
+				}
 			status = 0;
 			_getch();
 			system("cls");
@@ -400,7 +420,7 @@ int main()
 		}
 		if (status == 4) {
 			int i = 0;
-			cout << "С каким массивом работаем?(1/2)" << endl;
+			cout << "С каким массивом сейчас работаем?(1/2)" << endl;
 			cin >> numArr;
 			cout << "Какой элемент вывести?" << endl;
 			cin >> i;
@@ -454,19 +474,20 @@ int main()
 			_getch();
 			system("cls");
 		}
+		//cout << " ==  !=  <  >  <=  >=\n " << (arr1 == arr2) << " " << (arr1 != arr2) << " ";// 
 		if (status == 7) {
 			bool flag = false;
 			try {
-				cout << " == != < > <= >=\n " << (arr1 == arr2) << " " << (arr1 != arr2) << " ";
+				cout << " == " << (arr1 == arr2) << endl;
+				cout << " != " << (arr1 != arr2) << endl;
 			}
 			catch (BadArrayLengthException e) {
-				std::cerr << "Размеры массивов разные" << endl;
-				flag = true;
+				std::cerr << "Размеры массивов разные =( " << endl;
 			}
-			if (flag) {
-				cout << "< > <= >=" << endl;
-			}
-			cout << (arr1 < arr2) << " " << (arr1 > arr2) << " " << (arr1 <= arr2) << " " << (arr1 >= arr2) << " " << endl;
+			cout << " < " << (arr1 < arr2) << endl;
+			cout << " > " << (arr1 > arr2) << endl;
+			cout << " <= " << (arr1 <= arr2) << endl;
+			cout << " >= " << (arr1 >= arr2) << endl;
 			status = 0;
 			cout << "Готово!" << endl;
 			_getch();
@@ -538,7 +559,7 @@ int main()
 			system("cls");
 		}
 		if (status == 12) {
-			cout << "Из какого массива хотите вытащить элемент?(1/2)" << endl;
+			cout << "Из какого массива хотите извлечь элемент?(1/2)" << endl;
 			cin >> status;
 			numArr;
 			try {

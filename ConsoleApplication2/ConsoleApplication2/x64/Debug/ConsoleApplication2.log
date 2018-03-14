@@ -1,10 +1,10 @@
 ﻿  ConsoleApplication2.cpp
-c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(412): warning C4101: e: неиспользованная локальная переменная
-c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(446): warning C4101: e: неиспользованная локальная переменная
-c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(459): warning C4101: e: неиспользованная локальная переменная
-c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(493): warning C4101: e: неиспользованная локальная переменная
-c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(502): warning C4101: size: неиспользованная локальная переменная
-c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(529): warning C4101: e: неиспользованная локальная переменная
-c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(549): warning C4101: e: неиспользованная локальная переменная
+c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(435): warning C4101: e: неиспользованная локальная переменная
+c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(469): warning C4101: e: неиспользованная локальная переменная
+c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(484): warning C4101: e: неиспользованная локальная переменная
+c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(517): warning C4101: e: неиспользованная локальная переменная
+c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(526): warning C4101: size: неиспользованная локальная переменная
+c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(553): warning C4101: e: неиспользованная локальная переменная
+c:\users\student\source\repos\consoleapplication2\consoleapplication2\consoleapplication2.cpp(573): warning C4101: e: неиспользованная локальная переменная
   ConsoleApplication2.vcxproj -> C:\Users\Student\source\repos\ConsoleApplication2\x64\Debug\ConsoleApplication2.exe
   ConsoleApplication2.vcxproj -> C:\Users\Student\source\repos\ConsoleApplication2\x64\Debug\ConsoleApplication2.pdb (Partial PDB)
