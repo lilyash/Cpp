@@ -9,14 +9,14 @@ private:
 	int N;
 	int start;
 	int ends;
-
+	bool empty;
 public:
 	Queue(int N);
 	~Queue();
-	void push();
+	void push(int elem);
 	int getFirst();
 	int front();
 	int size();
-	void isEmpty();
-	bool makeEmpty();
+	bool isEmpty();
+	void makeEmpty();
 };
