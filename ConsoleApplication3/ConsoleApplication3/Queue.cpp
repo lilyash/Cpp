@@ -2,12 +2,32 @@
 #include "stdafx.h"
 
 
+
+Queue::Queue()
+{
+	this->start = 0;
+	this->ends = 0;
+	this->array = new int[5];
+	empty = true;
+}
+
 Queue::Queue(int N) {
-	this->N = N;
+	this->N= N;
 	this->start = 0;
 	this->ends = 0;
 	this->array = new int[N];
 	empty = true;
+}
+
+Queue::Queue(const Queue & copy)
+{
+	this->start = copy.start;
+	this->ends = copy.ends;
+	this->N = copy.N;
+	this->array = new int[copy.N];
+	for (int i = 0; i < copy.N; i++) {
+		this->array[i] = copy.array[i];
+	}
 }
 
 Queue::~Queue(){

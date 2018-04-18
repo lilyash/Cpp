@@ -11,7 +11,9 @@ private:
 	int ends;
 	bool empty;
 public:
+	Queue();
 	Queue(int N);
+	Queue(const Queue &copy);
 	~Queue();
 	void push(int elem);
 	int getFirst();
@@ -19,4 +21,5 @@ public:
 	int size();
 	bool isEmpty();
 	void makeEmpty();
+	friend class Iterator;
 };
