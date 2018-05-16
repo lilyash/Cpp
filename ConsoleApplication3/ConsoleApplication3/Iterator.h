@@ -5,7 +5,7 @@ private:
 	Queue *queue;
 	int index;
 public:
-	Iterator(Queue queue);
+	Iterator(Queue *queue);
 	~Iterator();
 	void start();
 	void next();

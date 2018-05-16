@@ -1,5 +1,5 @@
-#include "Queue.h"
 #include "stdafx.h"
+#include "Queue.h"
 
 
 
@@ -36,12 +36,17 @@ Queue::~Queue(){
 
 void Queue::push(int elem)
 {
-	if ((ends+1) == start) {
+	if ((ends+1)%N == start) {
 		throw Œver—rowdingException();
 	}
-	ends = (ends + 1) % N;
-	empty = false;
-	array[ends] = elem;
+	if (empty) {
+		empty = false;
+		array[ends] = elem;
+	}
+	else {
+		ends = (ends + 1) % N;
+		array[ends] = elem;
+	}
 }
 
 int Queue::getFirst()
